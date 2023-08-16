@@ -1,0 +1,12 @@
+
+h1 {
+    color: rgba(225, 48, 185, 1);
+    font-size: 50px;
+    font-family:Verdana;
+    text-shadow: 5px 5px 10px #999;
+    text-align: center;
+    padding: 2rem;
+}
+main {
+    text-decoration: none;
+}

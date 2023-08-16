@@ -1,0 +1,28 @@
+.navbar{
+    width: 100%;
+    background:linear-gradient(255deg, rgba(225,48,185,1) 0%, rgba(163,48,225,1)50%);
+    display: flex;
+}
+.link {
+    color: white !important;
+    font-family: sans-serif;
+    padding: 1rem !important;
+    font-size: large !important;
+    text-shadow: 1px 1px 1px #000;
+    text-decoration: none ;
+}
+.nav-link{
+    color: white !important;
+    font-family: sans-serif;
+    padding: 1rem !important;
+    font-size: large !important;
+    text-shadow: 1px 1px 1px #000;
+}
+.container {
+    padding: 0;
+    margin-right: 1rem ;
+    margin-left: 2rem ;
+}
+.basic-nav-dropdown {
+    display: flex;
+}

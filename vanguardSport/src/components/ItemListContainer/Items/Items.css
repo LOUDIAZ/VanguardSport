@@ -1,0 +1,18 @@
+.footer {
+    display: flex;
+}
+
+.btn {
+    background-color: rgba(225,48,185,1);
+    border:rgba(163,48,225,1) ;
+}
+.btn:hover {
+    background-color:rgba(163,48,225,1) ;;
+}
+
+.price {
+    padding: 1rem;
+}
+.card-title {
+    text-decoration: none !important;
+}
