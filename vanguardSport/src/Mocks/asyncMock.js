@@ -9,7 +9,8 @@ const items = [{
         title: "Remera running ligera y transpirable.",
         description: "Remera de running adidas que te dará comodidad y frescura.",
         category: "Mujer",
-        price: "18.000"
+        price: "18.000",
+        stock: "6",
     },
     {
         id: "2",
@@ -17,7 +18,8 @@ const items = [{
         title: "Buzo clásico con infinitas opciones de estilo.",
         description: "Confeccionado en felpa francesa de algodón, muy suave contra la piel.",
         category: "Mujer",
-        price: "28.000"
+        price: "28.000",
+        stock: "6",
     },
     {
         id: "3",
@@ -25,7 +27,8 @@ const items = [{
         title: "Calza elástica con un clasico estilo deportivo.",
         description: "La versatilidad para el día a día se combina con el estilo clásico.",
         category: "Mujer",
-        price: "18.500"
+        price: "18.500",
+        stock: "6",
     },
     {
         id: "4",
@@ -33,7 +36,8 @@ const items = [{
         title: "Zapatillas Running Mujer Adidas Galaxy 6 Negro.",
         description: "Unas zapatillas cómodas diseñadas para todo tipo de actividades.",
         category: "Mujer",
-        price: "28.500"
+        price: "28.500",
+        stock: "6",
     }
 ]
 export const getItems = () => {

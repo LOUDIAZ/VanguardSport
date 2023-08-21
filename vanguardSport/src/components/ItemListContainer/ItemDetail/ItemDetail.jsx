@@ -1,18 +1,30 @@
-import "../Items/Items.css";
-import Button from 'react-bootstrap/Button';
+import "../ItemDetail/ItemDetail.css";
 import Card from "react-bootstrap/Card";
+import { useState } from "react";
+import { Link } from "react-router-dom";
+import ItemCount from "../../ItemCount/ItemCount";
 
-function ItemDetail ({id, img, title, description, category, price }) {
+function ItemDetail({ id, img, title, description, category, price, stock }) {
+
+    const [quantityAdded, setQuantityAdded] = useState(0)
+    const handleOnAdd = (quantity) => {
+        setQuantityAdded(quantity)
+    }
     return (
-        <Card style={{ width: '18rem' }} data-id={id}>
-            <Card.Img variant="top" src={img} />
-            <Card.Body>
+        <Card className="conteinerCard" data-id={id}>
+            <Card.Img variant="top" className="imgCard" src={img} />
+            <Card.Body className="bodyCard">
                 <Card.Title>{title}</Card.Title>
                 <Card.Text>{description}</Card.Text>
                 <Card.Text>{category}</Card.Text>
-                <Card.Footer className="footer">
-                    <Button className="btn">SHOP NOW</Button>
+                <Card.Footer className="footerCard">
                     <Card.Text className="price">${price}</Card.Text>
+                    {
+                        quantityAdded > 0 ? (
+                            <Link to="/cart" >Finalizar Compra</Link>
+                        ) : (<ItemCount initial={1} stock={stock} onAdd={handleOnAdd} />
+                        )
+                    }
                 </Card.Footer>
             </Card.Body>
         </Card >

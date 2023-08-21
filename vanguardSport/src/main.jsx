@@ -13,7 +13,7 @@ ReactDOM.createRoot(document.getElementById('root')).render(
     {<BrowserRouter>
       <Routes>
         <Route path="/" element={<App />} />
-        <Route exact path="/carrito" element={<Cart />} />
+        <Route exact path="/cart" element={<Cart />} />
         <Route exact path="/category/:categoryId" element={
           <>
             <NavBar />
