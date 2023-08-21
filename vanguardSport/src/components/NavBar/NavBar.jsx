@@ -11,19 +11,17 @@ const NavBar = () => {
     return (
         <Navbar expand="lg" className="bg-tertiary">
             <Container className="container ms-auto">
-                <Link to="/">
-                <Navbar.Brand href="#home">
+                <Navbar.Brand as={Link} to="/">
                     <img src={logo} alt="logo" width={160} height={160} />
                 </Navbar.Brand>
-                </Link>
                 <Navbar.Toggle aria-controls="basic-navbar-nav" />
                 <Navbar.Collapse id="basic-navbar-nav">
                     <Nav className="ms-auto">
-                        <Nav.Link><Link className="link" to="/category/Mujer">Mujer</Link></Nav.Link>
-                        <Nav.Link><Link className="link" to="/category/Hombre">Hombre</Link></Nav.Link>
-                        <Nav.Link><Link className="link" to="/category/Infantil">Infantil</Link></Nav.Link>
-                        <Nav.Link><Link className="link" to="/category/Zapatillas">Zapatillas</Link></Nav.Link>
-                        <Nav.Link><Link className="link" to="/category/Ofertas">Ofertas</Link></Nav.Link>
+                        <Nav.Link as={Link} to="/category/Mujer">Mujer</Nav.Link>
+                        <Nav.Link as={Link} to="/category/Hombre">Hombre</Nav.Link>
+                        <Nav.Link as={Link} to="/category/Infantil">Infantil</Nav.Link>
+                        <Nav.Link as={Link} to="/category/Zapatillas">Zapatillas</Nav.Link>
+                        <Nav.Link as={Link} to="/category/Ofertas">Ofertas</Nav.Link>
                         <NavDropdown title="Categorías" id="basic-nav-dropdown">
                             <NavDropdown.Item href="#running">Running</NavDropdown.Item>
                             <NavDropdown.Item href="#training">Training</NavDropdown.Item>
@@ -32,7 +30,7 @@ const NavBar = () => {
                             <NavDropdown.Item href="#voley">Voley</NavDropdown.Item>
                             <NavDropdown.Item href="#tenis">Tenis</NavDropdown.Item>
                         </NavDropdown>
-                        <Nav.Link href="#link"><CartWidget /></Nav.Link>
+                        <Nav.Link href=""><CartWidget /></Nav.Link>
                     </Nav>
                 </Navbar.Collapse>
             </Container>
