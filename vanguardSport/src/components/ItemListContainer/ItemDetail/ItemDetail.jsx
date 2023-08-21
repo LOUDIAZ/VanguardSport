@@ -11,18 +11,18 @@ function ItemDetail({ id, img, title, description, category, price, stock }) {
         setQuantityAdded(quantity)
     }
     return (
-        <Card className="conteinerCard" data-id={id}>
+        <Card className="conteinerCard d-flex flex-row" data-id={id}>
             <Card.Img variant="top" className="imgCard" src={img} />
-            <Card.Body className="bodyCard">
+            <Card.Body className="bodyCard " >
                 <Card.Title>{title}</Card.Title>
                 <Card.Text>{description}</Card.Text>
                 <Card.Text>{category}</Card.Text>
-                <Card.Footer className="footerCard">
-                    <Card.Text className="price">${price}</Card.Text>
+                <Card.Text className="price">${price}</Card.Text>
+                <Card.Footer className="footerCard d-flex flex-row justify-content-center">
                     {
                         quantityAdded > 0 ? (
                             <Link to="/cart" >Finalizar Compra</Link>
-                        ) : (<ItemCount initial={1} stock={stock} onAdd={handleOnAdd} />
+                        ) : (<ItemCount className="itemCount" initial={1} stock={stock} onAdd={handleOnAdd} />
                         )
                     }
                 </Card.Footer>
