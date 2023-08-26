@@ -1,14 +1,23 @@
 import "../ItemDetail/ItemDetail.css";
 import Card from "react-bootstrap/Card";
-import { useState } from "react";
+import { useContext, useState } from "react";
 import { Link } from "react-router-dom";
 import ItemCount from "../../ItemCount/ItemCount";
+import { CartContext } from "../../../context/CartContext";
 
 function ItemDetail({ id, img, title, description, category, price, stock }) {
 
     const [quantityAdded, setQuantityAdded] = useState(0)
+
+    const {addItem} = useContext(CartContext)
+
     const handleOnAdd = (quantity) => {
         setQuantityAdded(quantity)
+
+        const item ={
+            id,title,price
+        }
+        addItem (item, quantity)
     }
     return (
         <Card className="conteinerCard d-flex flex-row" data-id={id}>
