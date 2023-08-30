@@ -1,0 +1,29 @@
+.footer {
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    background:linear-gradient(255deg, rgba(225,48,185,1) 0%, rgba(163,48,225,1)50%);
+    min-height: 20vh;
+    margin-top: 40px;
+    padding: 1em 3em 1em 3em;
+}
+.logo{
+    width: 25vh;
+}
+h3 {
+    text-align: center;
+    font-size: 1.2em;
+    color: white;
+}
+ul {
+    color: white;
+    list-style: none;
+    padding: 10px;
+}
+
+.contact_icons{
+    display: flex;
+    align-items: center;
+    justify-content: space-between;
+}
+

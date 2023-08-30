@@ -1,4 +1,4 @@
-.footer {
+.footer_card {
     display: flex;
 }
 
@@ -7,7 +7,7 @@
     border:rgba(163,48,225,1) ;
 }
 .btn:hover {
-    background-color:rgba(163,48,225,1) ;;
+    background-color:rgba(163,48,225,1);
 }
 
 .price {

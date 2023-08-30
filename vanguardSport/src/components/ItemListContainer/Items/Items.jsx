@@ -10,7 +10,7 @@ function Items({id, img, title, description, category, price }) {
                 <Card.Title>{title}</Card.Title>
                 <Card.Text>{description}</Card.Text>
                 <Card.Text>{category}</Card.Text>
-                <Card.Footer className="footer">
+                <Card.Footer className="footer_card">
                     <Button className="btn">SHOP NOW</Button>
                     <Card.Text className="price">${price}</Card.Text>
                 </Card.Footer>
