@@ -5,13 +5,17 @@ import ItemListContainer from './components/ItemListContainer/ItemListContainer'
 import Carousel from './components/Carousels/Carousels';
 import Footer from './components/Footer/Footer';
 
+
+
 function App() {
+
+
   return (
     <>
-        <NavBar />
-        <Carousel/>
-        <ItemListContainer greeting={"Bienvenidos"} />
-        <Footer/>
+      <NavBar />
+      <Carousel />
+      <ItemListContainer greeting={"Bienvenidos"} />
+      <Footer />
     </>
   )
 }

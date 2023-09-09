@@ -1,8 +1,9 @@
 import { useEffect, useState } from 'react';
-import { getItem } from '../../../Mocks/asyncMock';
 import Loader from '../Loader/Loader';
 import { useParams } from 'react-router-dom';
 import ItemDetail from '../ItemDetail/ItemDetail';
+import { doc, getDoc } from 'firebase/firestore';
+import { firestore } from '../../../firebase/client';
 
 function ItemDetailContainer () {
     const [isLoading, setIsLoading] = useState(true);
@@ -10,14 +11,16 @@ function ItemDetailContainer () {
     const {itemId} = useParams()
 
     useEffect(() => {
-        getItem(itemId)
-        .then((result) => {
-            const createdItem = new Date(result.created_item);
-            setItem(...result, createdItem);
+        const docRef = doc (firestore,"items", itemId)
+        getDoc(docRef)
+            .then(response => {
+                const data = response.data()
+                const itemAdapted = {id: response.id, ...data}
+                setItem(itemAdapted)
             })
             .catch(error => console.error(error))
             .finally(() => setIsLoading(false));
-    })
+    }, [itemId])
 
     if (isLoading) return <Loader />;
 
